@@ -108,7 +108,7 @@ Expected output: predicted future trajectories, visibility predictions, and rend
 
 ## 📈 Benchmark and Visualization
 
-After running the inference commands above, use the saved outputs in `--out_dir` to render qualitative results and compute benchmark metrics.
+After running the inference commands above, you can use the saved outputs in `--out_dir` to render qualitative results and compute benchmark metrics.
 
 ### Render Trajectories
 
