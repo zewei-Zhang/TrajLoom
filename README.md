@@ -29,8 +29,8 @@
 <div align="center">
   <a href="https://trajloom.github.io/"><img src="https://img.shields.io/badge/Project-Page-green.svg" alt="Project Page"></a>
   <a href="https://arxiv.org/abs/0000.00000"><img src="https://img.shields.io/badge/arXiv-Preprint-b31b1b.svg?logo=arxiv&logoColor=white" alt="arXiv Preprint"></a>
-  <a href="https://huggingface.co/zeweizhang/TrajLoom"><img src="https://img.shields.io/badge/HuggingFace-Model-ffbd45.svg?logo=huggingface&logoColor=black" alt="Hugging Face Model"></a>
-  <a href="https://huggingface.co/datasets/zeweizhang/TrajLoomDatasets"><img src="https://img.shields.io/badge/HuggingFace-Dataset-ffbd45.svg?logo=huggingface&logoColor=black" alt="Hugging Face Dataset"></a>
+  <a href="https://huggingface.co/zeweizhang/TrajLoom"><img src="https://img.shields.io/badge/HuggingFace-Model-ffbd45.svg?logo=huggingface&logoColor=ffbd45" alt="Hugging Face Model"></a>
+  <a href="https://huggingface.co/datasets/zeweizhang/TrajLoomDatasets"><img src="https://img.shields.io/badge/HuggingFace-Dataset-ffbd45.svg?logo=huggingface&logoColor=ffbd45" alt="Hugging Face Dataset"></a>
 </div>
 
 <p align="center">
