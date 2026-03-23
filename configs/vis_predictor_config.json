@@ -1,0 +1,119 @@
+{
+  "seed": 42,
+  "data": {
+    "video_dir": "/path/to/videos/",
+    "tracks_dir": "/path/to/data/tracks/",
+    "caption_csv": "/path/to/data/captions.csv",
+    "caption_video_col": "video_path",
+    "caption_text_col": "text",
+    "caption_vid_col": "videoid",
+    "raw_height": 480,
+    "raw_width": 832,
+    "hist_len": 81,
+    "future_len": 81,
+    "use_overlap": false,
+    "track_stride": 32,
+    "axis_order": "xy",
+    "video_reader": "cv2",
+    "video_exts": ".mp4",
+    "max_frames": 162,
+    "train_fraction": 0.9,
+    "seed": 42
+  },
+  "raw_height": 480,
+  "raw_width": 832,
+  "trajectory_vae": {
+    "ckpt_path": "/path/to/checkpoints/trajloom_vae.pt",
+    "config": {
+      "encoder_depth": 16,
+      "decoder_depth": 16,
+      "hidden_size": 512,
+      "num_heads": 8,
+      "patch_size": 32,
+      "in_channels": 2,
+      "latent_channels": 16,
+      "input_height": 480,
+      "input_width": 832,
+      "num_frames_in": 81,
+      "num_frames_latent": 21,
+      "use_temp_compress": true,
+      "temp_method": "conv",
+      "temp_stride": 4,
+      "use_dino": false,
+      "use_refine3d": false,
+      "use_offsets": true,
+      "num_frame_tokens": 256,
+      "frame_features_dim": 1024,
+      "learn_sigma": false,
+      "beta": 5e-5,
+      "pos_embed_dim": 64
+    }
+  },
+  "latent_stats_json": "/path/to/latent_stats_cache.json",
+  "latent_stats_key": "z_fut",
+  "patch_size": 32,
+  "temp_stride": 4,
+  "predictor": {
+    "latent_channels": 16,
+    "hidden": 64,
+    "depth": 3,
+    "kernel_size": 3,
+    "use_hist_last": false,
+    "use_delta_to_hist": false
+  },
+  "train": {
+    "batch_size": 4,
+    "num_workers": 4,
+    "val_fraction": 0.02,
+    "lr": 0.0003,
+    "weight_decay": 0.01,
+    "grad_clip_norm": 1.0,
+    "grad_accum_steps": 1,
+    "max_steps": 20000,
+    "log_every": 50,
+    "eval_every": 500,
+    "save_every": 2000,
+    "max_val_batches": 200,
+    "pos_weight": 0.0,
+    "train_segments": [
+      "hist",
+      "fut"
+    ],
+    "aug": {
+      "mix_a_max": 0.0,
+      "add_sigma": 0.0,
+      "token_dropout": 0.0
+    },
+    "mixed_precision": "bf16"
+  },
+  "lr_schedule": {
+    "schedule": "cosine",
+    "warmup_steps": 500,
+    "min_lr": 3e-05
+  },
+  "out_dir": "/path/to/output/vis_predictor/",
+  "eval": {
+    "ckpt_path": "",
+    "batch_size": 4,
+    "num_workers": 4,
+    "max_batches": 0,
+    "eval_segments": [
+      "fut"
+    ],
+    "export_dir": "",
+    "export_batches": 5,
+    "thresh": 0.5
+  },
+  "wandb": {
+    "enabled": true,
+    "project": "vis-predictor",
+    "entity": "video-traj",
+    "name": "first_version",
+    "group": "",
+    "tags": [
+      "s32",
+      "baseline"
+    ],
+    "notes": ""
+  }
+}

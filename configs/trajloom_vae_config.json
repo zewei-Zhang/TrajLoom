@@ -1,0 +1,63 @@
+{
+  "data": {
+    "video_dir": "/path/to/videos/",
+    "tracks_dir": "/path/to/data/tracks/",
+    "hist_len": 81,
+    "future_len": 81,
+    "use_overlap": false,
+    "raw_width": 832,
+    "raw_height": 480,
+    "axis_order": "xy",
+    "video_reader": "cv2",
+    "track_stride": 32
+  },
+  "trajloom_vae": {
+    "config": {
+      "encoder_depth": 16,
+      "decoder_depth": 16,
+      "hidden_size": 512,
+      "num_heads": 8,
+      "patch_size": 32,
+      "in_channels": 2,
+      "latent_channels": 16,
+      "input_height": 480,
+      "input_width": 832,
+      "num_frames_in": 81,
+      "num_frames_latent": 21,
+      "use_temp_compress": true,
+      "temp_stride": 4,
+      "use_offsets": true,
+      "num_frame_tokens": 256,
+      "learn_sigma": false,
+      "beta": 5e-5,
+      "pos_embed_dim": 64
+    }
+  },
+  "train": {
+    "out_dir": "/path/to/output/trajloom_vae/",
+    "seed": 42,
+    "num_epochs": 4000,
+    "batch_size": 4,
+    "val_split": 0.1,
+    "num_workers": 8,
+    "mixed_precision": "bf16",
+    "learning_rate": 2e-5,
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "weight_decay": 0.0,
+    "gradient_accumulation_steps": 2,
+    "clip_grad_norm": 1.0,
+    "vel_lambda": 0.1,
+    "neighbor_lambda": 0.2,
+    "log_every": 10,
+    "val_every": 100,
+    "val_max_batches": 1,
+    "save_every": 1000,
+    "resume": null,
+    "entity": "video-traj",
+    "wandb_project": "wan-track-vae",
+    "wandb_name": "wan-track-vae-final"
+  }
+}
