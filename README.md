@@ -28,7 +28,7 @@
 
 <div align="center">
   <a href="https://trajloom.github.io/"><img src="https://img.shields.io/badge/Project-Page-green.svg" alt="Project Page"></a>
-  <a href="https://arxiv.org/abs/0000.00000"><img src="https://img.shields.io/badge/arXiv-Preprint-b31b1b.svg?logo=arxiv&logoColor=white" alt="arXiv Preprint"></a>
+  <a href="https://arxiv.org/abs/2603.22606"><img src="https://img.shields.io/badge/arXiv-Preprint-b31b1b.svg?logo=arxiv&logoColor=white" alt="arXiv Preprint"></a>
   <a href="https://huggingface.co/zeweizhang/TrajLoom"><img src="https://img.shields.io/badge/HuggingFace-Model-ffbd45.svg?logo=huggingface&logoColor=ffbd45" alt="Hugging Face Model"></a>
   <a href="https://huggingface.co/datasets/zeweizhang/TrajLoomDatasets"><img src="https://img.shields.io/badge/HuggingFace-Dataset-ffbd45.svg?logo=huggingface&logoColor=ffbd45" alt="Hugging Face Dataset"></a>
 </div>
@@ -173,11 +173,13 @@ We also acknowledge <a href="https://github.com/DSL-Lab/FVMD-frechet-video-motio
 ## 📚 Citation
 
 ```bibtex
-@article{trajloom,
-  title={TrajLoom: Dense Future Trajectory Generation from Video},
-  author={Zewei Zhang and Jia Jun Cheng Xian and Kaiwen Liu and Ming Liang and Hang Chu and Jun Chen and Renjie Liao},
-  journal={TBD},
-  year={TBD},
-  url={TBD}
+@misc{zhang2026trajloomdensefuturetrajectory,
+      title={TrajLoom: Dense Future Trajectory Generation from Video}, 
+      author={Zewei Zhang and Jia Jun Cheng Xian and Kaiwen Liu and Ming Liang and Hang Chu and Jun Chen and Renjie Liao},
+      year={2026},
+      eprint={2603.22606},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2603.22606}, 
 }
 ```
