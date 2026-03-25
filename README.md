@@ -119,7 +119,7 @@ python -m benchmark.render_trajectory \
   --out_dir "/path/to/render_outputs/<video_id>"
 ```
 
-For VAE reconstruction outputs, compute VEPE with:
+### For VAE reconstruction outputs, compute VEPE with:
 
 ```bash
 python -m benchmark.compute_vae_recon_metrics \
@@ -127,7 +127,7 @@ python -m benchmark.compute_vae_recon_metrics \
   --out_json "/path/to/vae_recon_metrics.json"
 ```
 
-For generated trajectory outputs, compute trajectory quality metrics with:
+### For generated trajectory outputs, compute trajectory quality metrics with:
 
 ```bash
 python -m benchmark.compute_trajectory_quality_metrics \
